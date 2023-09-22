@@ -40,8 +40,11 @@ namespace Program
 
         private static void Main(string[] args)
         {
+            
             Console.Write("Result of nameof: ");
             Test(() => { var a = nameof(MyEnum) == "Monday"; });
+            Console.Write("Result of nameof + equals: ");
+            Test(() => { var a = nameof(MyEnum).Equals("Monday"); });
             Console.Write("Result of ToString ==: ");
             Test(() => { var a = MyEnum.Monday.ToString() == "Monday"; });
             Console.Write("Result of ToString Equals: ");
